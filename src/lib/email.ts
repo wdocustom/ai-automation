@@ -96,7 +96,7 @@ export function buildOwnerNotificationEmail(booking: {
 }
 
 export function buildWaitlistEmail(name: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aiautomated.net";
   const insiderUrl = `${siteUrl}/insider`;
 
   return {
