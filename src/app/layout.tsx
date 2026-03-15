@@ -108,6 +108,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   category: "technology",
+  verification: {
+    google: "m5yt0dfqOUkvCSyPlmc8TrRlQfwMYTtqWybHpS5f9cU",
+  },
   other: {
     "apple-mobile-web-app-title": "Arcline",
   },
