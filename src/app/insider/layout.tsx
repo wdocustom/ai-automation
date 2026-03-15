@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://ai-automation-five-henna.vercel.app";
 
 export const metadata: Metadata = {
   title: "What We Build — AI Automation & SaaS Case Studies",
