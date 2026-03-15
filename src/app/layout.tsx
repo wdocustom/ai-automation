@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://ai-automation-five-henna.vercel.app";
+  "https://www.aiautomated.net";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

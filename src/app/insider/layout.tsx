@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://ai-automation-five-henna.vercel.app";
+  "https://www.aiautomated.net";
 
 export const metadata: Metadata = {
   title: "What We Build — AI Automation & SaaS Case Studies",
