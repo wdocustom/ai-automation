@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Arcline — Custom AI Automation & SaaS Development for Small Business";
+  "AI-Automated — Custom AI Automation & SaaS Development for Small Business";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -122,7 +122,7 @@ export default async function Image() {
             letterSpacing: "0.05em",
           }}
         >
-          ARCLINE
+          AI-AUTOMATED
         </div>
       </div>
     ),

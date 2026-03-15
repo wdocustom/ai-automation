@@ -30,7 +30,7 @@ export default function InsiderPage() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-lg tracking-tight">Arcline</span>
+            <span className="font-bold text-lg tracking-tight">AI-Automated</span>
           </a>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs text-purple-300">
             <Sparkles className="w-3 h-3" />
@@ -513,10 +513,10 @@ export default function InsiderPage() {
             <div className="w-6 h-6 rounded-md bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <Zap className="w-3 h-3 text-white" />
             </div>
-            <span className="font-semibold text-sm">Arcline</span>
+            <span className="font-semibold text-sm">AI-Automated</span>
           </div>
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Arcline. Custom engineering &
+            &copy; {new Date().getFullYear()} AI-Automated. Custom engineering &
             automation.
           </p>
         </div>

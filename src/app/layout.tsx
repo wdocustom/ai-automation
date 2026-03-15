@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Arcline — Custom AI Automation & SaaS Development for Small Business",
-    template: "%s | Arcline",
+      "AI-Automated — Custom AI Automation & SaaS Development for Small Business",
+    template: "%s | AI-Automated",
   },
   description:
     "Custom AI automation, workflow systems, and SaaS development for small businesses, contractors, clinics, agencies, and startups. We build the software that eliminates your busywork — so you can focus on growth. Book a free discovery call.",
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
     "Next.js development agency",
     "Vercel deployment services",
   ],
-  authors: [{ name: "Arcline" }],
-  creator: "Arcline",
-  publisher: "Arcline",
+  authors: [{ name: "AI-Automated" }],
+  creator: "AI-Automated",
+  publisher: "AI-Automated",
   robots: {
     index: true,
     follow: true,
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Arcline",
+    siteName: "AI-Automated",
     title:
-      "Arcline — Custom AI Automation & SaaS Development for Small Business",
+      "AI-Automated — Custom AI Automation & SaaS Development for Small Business",
     description:
       "Stop doing busy work. We build custom AI automation, workflow systems, and web applications for contractors, clinics, agencies, and startups. Book a free discovery call.",
     images: [
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Arcline — Custom AI Automation & SaaS Development",
+        alt: "AI-Automated — Custom AI Automation & SaaS Development",
         type: "image/png",
       },
     ],
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Arcline — Custom AI Automation & SaaS Development for Small Business",
+      "AI-Automated — Custom AI Automation & SaaS Development for Small Business",
     description:
       "Stop doing busy work. We build custom AI automation, workflow systems, and web applications for contractors, clinics, agencies, and startups.",
     images: [`${siteUrl}/og-image.png`],
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     google: "m5yt0dfqOUkvCSyPlmc8TrRlQfwMYTtqWybHpS5f9cU",
   },
   other: {
-    "apple-mobile-web-app-title": "Arcline",
+    "apple-mobile-web-app-title": "AI-Automated",
   },
 };
 
@@ -122,7 +122,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Arcline",
+  name: "AI-Automated",
   description:
     "Custom AI automation, workflow systems, and SaaS development for small businesses. We build software that eliminates busywork for contractors, clinics, agencies, and startups.",
   url: siteUrl,
@@ -202,7 +202,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do I need to be technical to work with Arcline?",
+      name: "Do I need to be technical to work with AI-Automated?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Not at all. Most of our clients aren't technical — that's why they hire us. We handle all the tech and explain everything in plain English. You tell us what your business needs, and we figure out how to build it.",

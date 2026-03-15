@@ -190,7 +190,7 @@ export function buildWaitlistEmail(name: string) {
         <!-- Footer -->
         <div style="background: #f8fafc; padding: 20px 32px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 12px 12px; text-align: center;">
           <p style="color: #94a3b8; font-size: 12px; margin: 0;">
-            Arcline — Custom AI Automation & Software Development
+            AI-Automated — Custom AI Automation & Software Development
           </p>
         </div>
       </div>

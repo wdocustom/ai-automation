@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "field service automation",
   ],
   openGraph: {
-    title: "What We Build — AI Automation & SaaS Case Studies | Arcline",
+    title: "What We Build — AI Automation & SaaS Case Studies | AI-Automated",
     description:
       "Real examples of custom AI automation, lead gen websites, and SaaS products we've built for healthcare, real estate, e-commerce, logistics, and more.",
     url: `${siteUrl}/insider`,
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Arcline — What We Build",
+        alt: "AI-Automated — What We Build",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "What We Build — AI Automation & SaaS Case Studies | Arcline",
+    title: "What We Build — AI Automation & SaaS Case Studies | AI-Automated",
     description:
       "Real examples of custom AI automation, lead gen websites, and SaaS products we've built across industries.",
   },
