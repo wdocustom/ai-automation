@@ -48,25 +48,27 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     budget_range: "",
   });
 
-  // Build the week days array
+  // Build the week days array starting from today
   const weekDays = useMemo(() => {
     const today = new Date();
-    const startOfWeek = new Date(today);
-    // Get Monday of current week + offset
-    const dayOfWeek = today.getDay();
-    const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
-    startOfWeek.setDate(today.getDate() + mondayOffset + weekOffset * 7);
+    const start = new Date(today);
+    start.setDate(today.getDate() + weekOffset * 5);
 
     const days = [];
-    for (let i = 0; i < 5; i++) {
-      const d = new Date(startOfWeek);
-      d.setDate(startOfWeek.getDate() + i);
-      days.push({
-        date: d.toISOString().split("T")[0],
-        dayName: d.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase(),
-        dayNum: d.getDate(),
-        isPast: d < new Date(new Date().toDateString()),
-      });
+    let current = new Date(start);
+    while (days.length < 5) {
+      const dayOfWeek = current.getDay();
+      // Skip weekends (0 = Sunday, 6 = Saturday)
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+        days.push({
+          date: current.toISOString().split("T")[0],
+          dayName: current.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase(),
+          dayNum: current.getDate(),
+          isPast: false,
+        });
+      }
+      current = new Date(current);
+      current.setDate(current.getDate() + 1);
     }
     return days;
   }, [weekOffset]);
