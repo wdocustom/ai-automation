@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | AI-Automated",
   },
   description:
-    "Custom AI automation, workflow systems, and SaaS development for small businesses, contractors, clinics, agencies, and startups. We build the software that eliminates your busywork — so you can focus on growth. Book a free discovery call.",
+    "Custom AI automation, workflow systems, and web applications for small businesses. We build software for contractors, clinics, agencies, and startups. Free discovery call.",
   keywords: [
     // Core services
     "AI automation for small business",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title:
       "AI-Automated — Custom AI Automation & SaaS Development for Small Business",
     description:
-      "Stop doing busy work. We build custom AI automation, workflow systems, and web applications for contractors, clinics, agencies, and startups. Book a free discovery call.",
+      "Custom AI automation, workflow systems, and web applications for small businesses. Built by engineers, not agencies.",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     title:
       "AI-Automated — Custom AI Automation & SaaS Development for Small Business",
     description:
-      "Stop doing busy work. We build custom AI automation, workflow systems, and web applications for contractors, clinics, agencies, and startups.",
+      "Custom AI automation, workflow systems, and web applications for small businesses. Built by engineers, not agencies.",
     images: [`${siteUrl}/og-image.png`],
   },
   alternates: {
@@ -124,7 +124,7 @@ const organizationSchema = {
   "@type": "ProfessionalService",
   name: "AI-Automated",
   description:
-    "Custom AI automation, workflow systems, and SaaS development for small businesses. We build software that eliminates busywork for contractors, clinics, agencies, and startups.",
+    "Custom AI automation, workflow systems, and SaaS development for small businesses, contractors, clinics, agencies, and startups.",
   url: siteUrl,
   logo: `${siteUrl}/og-image.png`,
   sameAs: [],
@@ -205,7 +205,7 @@ const faqSchema = {
       name: "Do I need to be technical to work with AI-Automated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not at all. Most of our clients aren't technical — that's why they hire us. We handle all the tech and explain everything in plain English. You tell us what your business needs, and we figure out how to build it.",
+        text: "No. Most of our clients aren't technical. You tell us what your business needs, we figure out how to build it and explain everything in plain English.",
       },
     },
     {

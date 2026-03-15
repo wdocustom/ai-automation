@@ -11,7 +11,6 @@ import {
   Clock,
   CheckCircle,
   ChevronDown,
-  Star,
   Workflow,
   Database,
   CreditCard,
@@ -95,16 +94,15 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-            Stop doing busy work.
+            We build the software
             <br />
-            <span className="gradient-text">We&apos;ll automate it.</span>
+            <span className="gradient-text">your business is missing.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            You didn&apos;t start your business to copy-paste data between spreadsheets
-            or chase invoices manually. We build custom AI systems and software that
-            handle the repetitive stuff — so you can focus on what actually grows
-            your business.
+            If you&apos;re still copying data between spreadsheets, sending invoices
+            by hand, or duct-taping tools together that don&apos;t talk to each other,
+            we can fix that. We write custom software and automation for small businesses.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -131,19 +129,15 @@ export default function Home() {
             )}
           </div>
 
-          {/* Social proof / trust indicators */}
+          {/* Trust indicators */}
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
             <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                ))}
-              </div>
-              <span>Trusted by founders & business owners</span>
+              <Clock className="w-4 h-4" />
+              <span>Most projects ship in 2–6 weeks</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>Most projects launch in 2–6 weeks</span>
+              <Code2 className="w-4 h-4" />
+              <span>You own the code, always</span>
             </div>
           </div>
         </div>
@@ -154,34 +148,31 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Sound familiar?
+              This is usually where people start
             </h2>
-            <p className="text-gray-400 text-lg">
-              These are the problems our clients had before they called us.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Drowning in manual tasks",
+                title: "Too much manual work",
                 description:
-                  "You're spending hours every week on data entry, report generation, or syncing information between tools that should be talking to each other.",
+                  "You're spending real hours every week on data entry, generating reports, or moving info between tools by hand. It's boring and it's expensive.",
               },
               {
-                title: "Your tech is held together with tape",
+                title: "A stack of tools that barely works",
                 description:
-                  "You've got a Zapier here, a spreadsheet there, and a prayer holding it all together. It works... until it doesn't.",
+                  "A Zapier here, a spreadsheet there, maybe a shared Google Doc with 47 tabs. It gets the job done until someone changes something and the whole thing breaks.",
               },
               {
-                title: "You know you should build, but when?",
+                title: "A product idea with no time to build it",
                 description:
-                  "You've got an idea for a tool, dashboard, or app that could transform your business — but you're too busy running it to actually build it.",
+                  "You know exactly what tool or app your business needs. You just don't have the engineering team to make it happen.",
               },
               {
-                title: "You've been burned before",
+                title: "Bad experiences with developers",
                 description:
-                  "You hired a developer or agency, paid upfront, and got something that didn't work. Now you're skeptical — and rightfully so.",
+                  "You paid someone before and got ghosted, or got something half-finished that doesn't actually work. Totally fair to be skeptical.",
               },
             ].map((item, i) => (
               <div
@@ -203,11 +194,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Two ways we make your life easier
+              What we do
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Whether you need to automate what you&apos;ve got or build something
-              entirely new, we handle the technical heavy lifting.
+              We either automate what you already have, or build something new from scratch.
             </p>
           </div>
 
@@ -219,9 +209,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-3">AI & Automation</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                We plug AI into your existing business so things just...happen.
-                Automatically. No more babysitting spreadsheets or manually
-                moving data around.
+                We connect your existing tools and build automations so
+                the repetitive stuff runs itself. Less manual work, fewer
+                mistakes, more time back.
               </p>
               <ul className="space-y-3">
                 {[
@@ -257,9 +247,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-3">SaaS & Web Apps</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Got an idea for a product? Need an internal tool? We build
-                polished, production-ready web applications from scratch — the
-                kind that actually work and your users will love.
+                Need a customer portal, an internal tool, or a full SaaS product?
+                We design and build web applications from the ground up. Real software,
+                not a no-code hack.
               </p>
               <ul className="space-y-3">
                 {[
@@ -296,10 +286,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Here&apos;s exactly how it works
+              How it works
             </h2>
             <p className="text-gray-400 text-lg">
-              No runaround. No mystery. Just a clear path from idea to launch.
+              Four steps. Pretty straightforward.
             </p>
           </div>
 
@@ -309,28 +299,28 @@ export default function Home() {
                 step: "01",
                 title: "Discovery Call (Free)",
                 description:
-                  "We hop on a 30-minute call to understand your business, your pain points, and what you're trying to accomplish. No pitch — just listening.",
+                  "30 minutes on a call. You tell us what's broken or what you want built, we ask questions and figure out if we can help. No sales pitch.",
                 color: "blue",
               },
               {
                 step: "02",
-                title: "Architecture & Scoping",
+                title: "Scoping & Architecture",
                 description:
-                  "We map out exactly what needs to be built, how long it'll take, and what it'll cost. This is a paid consultation — but 100% of that fee is credited toward the build if you move forward.",
+                  "We map out the technical plan, timeline, and cost. This is a paid consultation, but the full fee gets credited to your project if you move forward.",
                 color: "purple",
               },
               {
                 step: "03",
-                title: "We Build It",
+                title: "Build",
                 description:
-                  "You get regular updates, demos, and the chance to give feedback at every stage. No disappearing for months and hoping for the best.",
+                  "We build it. You get updates and demos along the way so nothing ends up being a surprise. If something needs to change mid-project, we talk about it.",
                 color: "cyan",
               },
               {
                 step: "04",
-                title: "Launch & Support",
+                title: "Launch & Handoff",
                 description:
-                  "We deploy, test, and make sure everything runs smoothly. Need ongoing support? We offer monthly retainers so your systems keep getting better.",
+                  "We deploy everything, make sure it works, and hand it over. You own the code. If you want ongoing dev work after that, we do retainers too.",
                 color: "green",
               },
             ].map((item, i) => (
@@ -368,11 +358,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Flexible engagement, fair pricing
+              Pricing
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              No bloated retainers or surprise invoices. Pick the model that fits
-              your stage and budget.
+              Three ways to work together. Pick what makes sense for your situation.
             </p>
           </div>
 
@@ -459,11 +448,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Built for businesses that run on hard work
+              Industries we work with
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              From job sites to corner offices — if your business has repetitive
-              processes eating up your time, we can automate them.
+              If your business has processes that eat up time, we can probably automate them.
+              Here are some of the industries we&apos;ve done work in.
             </p>
           </div>
 
@@ -504,8 +493,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-gray-500 text-sm mt-6">
-            Don&apos;t see your industry? We&apos;ve worked across 30+ verticals.
-            If your business has processes, we can automate them.
+            Don&apos;t see yours? Doesn&apos;t matter. If there&apos;s a process, we can automate it.
           </p>
         </div>
       </section>
@@ -515,7 +503,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why founders choose us
+              Why work with us
             </h2>
           </div>
 
@@ -523,33 +511,33 @@ export default function Home() {
             {[
               {
                 icon: Shield,
-                title: "No risk consultation",
-                desc: "The consultation fee gets credited 100% if we move forward. You only pay for results.",
+                title: "Consultation fee = deposit",
+                desc: "The scoping fee gets applied 100% to your project if you move forward. If you don't, you still walk away with a technical plan.",
               },
               {
                 icon: TrendingUp,
-                title: "Built to scale",
-                desc: "We don't build throwaway prototypes. Everything is production-grade from day one.",
+                title: "Production-grade code",
+                desc: "We don't build throwaway prototypes. What we ship is what you run your business on.",
               },
               {
                 icon: Clock,
-                title: "Fast turnaround",
-                desc: "Most projects go from call to launch in 2–6 weeks. We move fast without cutting corners.",
+                title: "2–6 week delivery",
+                desc: "Most projects ship within a month or two. We'll give you a real timeline upfront and stick to it.",
               },
               {
                 icon: Code2,
-                title: "You own everything",
-                desc: "Full source code ownership. No vendor lock-in. It's your business, it's your code.",
+                title: "Your code, period",
+                desc: "You get the source code. No lock-in, no proprietary platforms, no hostage situations.",
               },
               {
                 icon: Users,
-                title: "Plain English updates",
-                desc: "We explain everything in terms you actually understand. No jargon, no hand-waving.",
+                title: "We speak English, not jargon",
+                desc: "You'll always know what's happening with your project. If we can't explain it simply, that's on us.",
               },
               {
                 icon: Zap,
-                title: "One team, full stack",
-                desc: "Design, frontend, backend, AI, deployment — we handle the full picture, not just a piece.",
+                title: "Full stack, one team",
+                desc: "Design, frontend, backend, AI, infrastructure. You don't need to hire five different people.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 bg-white/[0.02] border border-white/5 rounded-xl">
@@ -567,35 +555,35 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Questions? We&apos;ve got answers.
+              FAQ
             </h2>
           </div>
 
           <div className="space-y-3">
             {[
               {
-                q: "I'm not technical at all. Is that a problem?",
-                a: "Not even a little. Most of our clients aren't technical — that's literally why they hire us. We handle all the tech and explain everything in plain English. You just tell us what your business needs, and we figure out how to build it.",
+                q: "I'm not technical. Is that a problem?",
+                a: "No. That's the whole point. You tell us what your business needs, we figure out how to build it. We'll explain things in normal words, not dev speak.",
               },
               {
-                q: "What's this consultation fee about?",
-                a: "Before we build anything, we need to properly understand your business and map out the right solution. That takes real work — so we charge a consultation fee to cover the architecture and scoping phase. But here's the thing: if you decide to move forward with the build, 100% of that fee gets applied to your project cost. So it's really just a deposit on the work.",
+                q: "What's the consultation fee for?",
+                a: "We charge a fee for the scoping and architecture phase because it's real work, not a sales call. We map out exactly what gets built, how, and how much. If you go ahead with the project, that fee gets applied to the total cost. If you don't, you keep the plan.",
               },
               {
-                q: "How much does a typical project cost?",
-                a: "It depends entirely on scope. A simple automation might be a few thousand dollars, while a full SaaS product could be significantly more. That's exactly what the discovery call is for — we'll give you an honest assessment before you spend a dime.",
+                q: "How much does this stuff cost?",
+                a: "Depends on what you need. A simple automation could be a few thousand. A full SaaS product is more. The discovery call is free and we'll give you a straight answer on cost before you commit to anything.",
               },
               {
-                q: "How long does a project usually take?",
-                a: "Most projects launch within 2–6 weeks. Automations are usually on the faster end, while full web applications take a bit longer. We'll give you a clear timeline during the scoping phase — and we stick to it.",
+                q: "How long does a project take?",
+                a: "Most things ship in 2–6 weeks. Automations are faster, full apps take longer. We give you a timeline during scoping and we stick to it.",
               },
               {
-                q: "What if I'm not ready to commit to a full project?",
-                a: "That's totally fine. Join the waitlist, and when you're ready, you'll have priority access. Or book a discovery call — it's free, no commitment, and you'll walk away with clarity on what's possible even if you don't move forward right now.",
+                q: "What if I'm not ready yet?",
+                a: "No worries. Join the waitlist or just book a free discovery call to talk through your idea. Zero commitment either way.",
               },
               {
-                q: "Do you offer ongoing support after launch?",
-                a: "Absolutely. We offer monthly retainers for ongoing development, optimization, and support. Many of our clients start with a project and then transition to a retainer once they see results. But it's never required — you own your code either way.",
+                q: "Do you do ongoing work after launch?",
+                a: "Yeah, we offer monthly retainers for continued development and support. A lot of clients start with a project and stay on for ongoing work. But it's optional. You own everything regardless.",
               },
             ].map((item, i) => (
               <div
@@ -630,14 +618,14 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center relative">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             {isAccepting
-              ? <>Ready to stop duct-taping<br />your business together?</>
-              : <>We&apos;re fully booked right now.<br />But you can skip the line.</>
+              ? <>Let&apos;s talk about<br />what you need built.</>
+              : <>We&apos;re at capacity right now.<br />Get on the list.</>
             }
           </h2>
           <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
             {isAccepting
-              ? "Whether you need to automate the chaos or build something entirely new — let's figure it out together. One call. No pressure. Just clarity."
-              : "Join the waitlist and you'll be the first to know when a spot opens up. We'll reach out personally to get your project started."}
+              ? "Book a free call. Tell us what's not working. We'll tell you if we can fix it and what it would take."
+              : "We'll reach out when a spot opens up. Waitlist members go first."}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -662,8 +650,8 @@ export default function Home() {
 
           <p className="text-sm text-gray-500 mt-6">
             {isAccepting
-              ? "Limited spots available each month. We keep our client list small so every project gets our full attention."
-              : "We take on a limited number of clients each month to ensure quality. Waitlist members get first priority."}
+              ? "We take on a handful of projects at a time so we can actually do them well."
+              : "We cap our project load each month. Waitlist gets first priority."}
           </p>
         </div>
       </section>

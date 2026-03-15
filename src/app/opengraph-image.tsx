@@ -50,7 +50,7 @@ export default async function Image() {
             letterSpacing: "-0.02em",
           }}
         >
-          Stop doing busy work.
+          We build the software
         </div>
 
         <div
@@ -66,7 +66,7 @@ export default async function Image() {
             letterSpacing: "-0.02em",
           }}
         >
-          We&apos;ll automate it.
+          your business is missing.
         </div>
 
         <div
@@ -79,8 +79,8 @@ export default async function Image() {
             marginBottom: 40,
           }}
         >
-          Custom AI automation, workflow systems, and SaaS development for small
-          businesses, contractors, clinics, agencies, and startups.
+          Custom AI automation, workflow systems, and web applications
+          for small businesses.
         </div>
 
         {/* CTA bar */}

@@ -44,14 +44,13 @@ export default function InsiderPage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-purple-600/8 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4">
-            What we actually build
+            What we build
             <br />
-            <span className="gradient-text">(and who we build it for)</span>
+            <span className="gradient-text">and who it&apos;s for</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            You&apos;re on our priority list — so we want to show you exactly
-            how businesses like yours are saving time, cutting costs, and scaling
-            faster with custom automation and software.
+            Real projects we&apos;ve done for real businesses. Here&apos;s what
+            the work actually looks like.
           </p>
         </div>
       </section>
@@ -68,7 +67,7 @@ export default function InsiderPage() {
             </h2>
           </div>
           <p className="text-gray-400 mb-10 ml-[52px]">
-            Real examples of how different industries are eliminating busywork.
+            Here&apos;s what we&apos;ve built across different industries.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -79,9 +78,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">Healthcare & Clinics</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A multi-location clinic was spending 20+ hours per week on
-                patient intake, appointment reminders, and insurance
-                verification — all done manually by front desk staff.
+                Multi-location clinic. Front desk staff were spending 20+ hours
+                a week on patient intake, appointment reminders, and insurance
+                verification. All manual.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -110,9 +109,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">Real Estate</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A property management company was juggling tenant applications,
+                Property management company tracking tenant applications,
                 lease renewals, and maintenance requests across spreadsheets,
-                email, and paper forms.
+                email, and paper forms. Stuff was falling through the cracks.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -141,9 +140,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">E-Commerce & Retail</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                An online retailer was manually tracking inventory across
-                multiple warehouses, updating product listings by hand, and
-                copy-pasting order data into their fulfillment system.
+                Online retailer manually tracking inventory across warehouses,
+                updating listings by hand, and copy-pasting order data into
+                fulfillment. Overselling was a constant problem.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -172,9 +171,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">Logistics & Field Services</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A field service company was dispatching technicians via phone
-                calls and text messages, with no visibility into who was
-                available, where, or when jobs were completed.
+                Field service company dispatching techs via phone calls and
+                texts. No visibility into availability, location, or job
+                completion status.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -203,9 +202,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">Agencies & Consulting</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A marketing agency was spending more time on reporting and
-                client updates than on actual strategy work. Every week,
-                someone compiled data from 5 different platforms into a slide deck.
+                Marketing agency spending more time on reporting than actual
+                strategy. Someone had to pull data from 5 platforms into a
+                slide deck every single week.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -234,9 +233,9 @@ export default function InsiderPage() {
                 <h3 className="text-lg font-bold">Finance & Accounting</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A bookkeeping firm was manually reconciling transactions,
-                chasing clients for receipts, and generating reports that took
-                hours to compile each month.
+                Bookkeeping firm manually reconciling transactions, chasing
+                clients for receipts, and generating monthly reports that took
+                hours to compile.
               </p>
               <div className="space-y-2 mb-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -273,8 +272,8 @@ export default function InsiderPage() {
             </h2>
           </div>
           <p className="text-gray-400 mb-10 ml-[52px]">
-            Not just a pretty page — sites that book calls, capture leads, and
-            handle client onboarding while you sleep.
+            Not brochure sites. These are sites that book calls, capture leads,
+            and handle onboarding without anyone touching them.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -288,9 +287,9 @@ export default function InsiderPage() {
                 A Roofing Company That Couldn&apos;t Keep Up With Leads
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                They were getting referrals by word of mouth, but had no system
-                to capture, qualify, or follow up with leads. Estimates were done
-                on pen and paper. Follow-ups fell through the cracks.
+                Getting referrals by word of mouth but had no system to capture
+                or follow up. Estimates on pen and paper. Half the follow-ups
+                never happened.
               </p>
 
               <div className="space-y-4 mb-6">
@@ -332,8 +331,8 @@ export default function InsiderPage() {
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Every new client meant 45 minutes of intake calls, manually
-                emailing document checklists, chasing signatures, and re-entering
-                data into their case management system.
+                emailing document checklists, chasing signatures, and typing
+                the same info into their case management system again.
               </p>
 
               <div className="space-y-4 mb-6">
@@ -379,8 +378,7 @@ export default function InsiderPage() {
             </h2>
           </div>
           <p className="text-gray-400 mb-10 ml-[52px]">
-            Got an idea for a software product? We take it from napkin sketch to
-            paying customers.
+            Have an idea for a software product? We build it start to finish.
           </p>
 
           <div className="p-8 bg-gradient-to-b from-green-500/5 to-transparent border border-white/10 rounded-2xl mb-8">
@@ -392,11 +390,10 @@ export default function InsiderPage() {
               A Fitness Coach Who Wanted to Productize Their Expertise
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              They were running their coaching business through DMs, PDFs, and
-              Zoom calls. They had 50 clients and couldn&apos;t scale beyond that
-              without hiring more coaches. They wanted a platform that could
-              deliver their programs without them being involved in every
-              interaction.
+              Running a coaching business through DMs, PDFs, and Zoom calls.
+              Had 50 clients and hit a ceiling. Needed a platform that could
+              deliver programs without being personally involved in every
+              single interaction.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-6">
@@ -484,12 +481,10 @@ export default function InsiderPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-purple-600/5 to-transparent pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            See something that fits your business?
+            Something here look like your situation?
           </h2>
           <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto leading-relaxed">
-            You&apos;re already on our priority list. When a spot opens up,
-            you&apos;ll be the first to hear from us — and we&apos;ll hit the
-            ground running.
+            You&apos;re on the list. When a spot opens, you&apos;ll hear from us first.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
