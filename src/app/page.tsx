@@ -454,6 +454,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Industries We Serve — SEO-rich section */}
+      <section id="industries" className="py-20 px-6 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Built for businesses that run on hard work
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              From job sites to corner offices — if your business has repetitive
+              processes eating up your time, we can automate them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {[
+              "HVAC & Mechanical",
+              "Plumbing",
+              "Roofing & Siding",
+              "Electrical Contractors",
+              "General Contractors",
+              "Landscaping & Lawn Care",
+              "Cleaning Services",
+              "Pest Control",
+              "Auto Repair & Detailing",
+              "Trucking & Logistics",
+              "Property Management",
+              "Construction",
+              "Healthcare & Clinics",
+              "Dental Practices",
+              "Veterinary Clinics",
+              "Law Firms",
+              "Accounting & Bookkeeping",
+              "Insurance Agencies",
+              "Real Estate",
+              "Marketing Agencies",
+              "Consulting Firms",
+              "Fitness & Coaching",
+              "E-Commerce & Retail",
+              "Restaurants & Food Service",
+            ].map((industry, i) => (
+              <div
+                key={i}
+                className="px-4 py-3 bg-white/[0.02] border border-white/5 rounded-lg text-sm text-gray-300 text-center hover:border-white/10 hover:bg-white/[0.04] transition-colors"
+              >
+                {industry}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-gray-500 text-sm mt-6">
+            Don&apos;t see your industry? We&apos;ve worked across 30+ verticals.
+            If your business has processes, we can automate them.
+          </p>
+        </div>
+      </section>
+
       {/* Why Us / Trust Section */}
       <section className="py-20 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
