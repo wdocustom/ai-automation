@@ -21,10 +21,22 @@ import {
 import WaitlistModal from "@/components/WaitlistModal";
 import BookingModal from "@/components/BookingModal";
 
+const isAccepting =
+  process.env.NEXT_PUBLIC_ACCEPTING_PROJECTS !== "false";
+
 export default function Home() {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Primary action based on availability
+  const openPrimary = () => {
+    if (isAccepting) {
+      setBookingOpen(true);
+    } else {
+      setWaitlistOpen(true);
+    }
+  };
 
   return (
     <div className="min-h-screen grid-bg">
@@ -52,10 +64,10 @@ export default function Home() {
             </a>
           </div>
           <button
-            onClick={() => setBookingOpen(true)}
+            onClick={openPrimary}
             className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors"
           >
-            Book a Call
+            {isAccepting ? "Book a Call" : "Join Waitlist"}
           </button>
         </div>
       </nav>
@@ -64,9 +76,22 @@ export default function Home() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 mb-8">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Currently accepting new projects
+          {/* Status Badge */}
+          <div
+            className={`inline-flex items-center gap-2 px-4 py-2 bg-white/5 border rounded-full text-sm mb-8 ${
+              isAccepting
+                ? "border-green-500/20 text-gray-300"
+                : "border-yellow-500/20 text-gray-300"
+            }`}
+          >
+            <span
+              className={`w-2 h-2 rounded-full animate-pulse ${
+                isAccepting ? "bg-green-400" : "bg-yellow-400"
+              }`}
+            />
+            {isAccepting
+              ? "Currently accepting new projects"
+              : "Fully booked — join the waitlist for priority access"}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
@@ -83,19 +108,27 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
-            >
-              Book a Free Discovery Call
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={() => setWaitlistOpen(true)}
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl font-medium text-lg transition-all"
-            >
-              Join the Waitlist
-            </button>
+            {isAccepting ? (
+              <>
+                <button
+                  onClick={() => setBookingOpen(true)}
+                  className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
+                >
+                  Book a Free Discovery Call
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => setWaitlistOpen(true)}
+                  className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
+                >
+                  Join the Waitlist — Get Priority Access
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </>
+            )}
           </div>
 
           {/* Social proof / trust indicators */}
@@ -406,14 +439,14 @@ export default function Home() {
                   ))}
                 </ul>
                 <button
-                  onClick={() => setBookingOpen(true)}
+                  onClick={openPrimary}
                   className={`w-full py-3 rounded-lg font-medium transition-all ${
                     plan.highlight
                       ? "bg-blue-600 hover:bg-blue-500"
                       : "bg-white/5 hover:bg-white/10 border border-white/10"
                   }`}
                 >
-                  Let&apos;s Talk
+                  {isAccepting ? "Let\u0027s Talk" : "Join Waitlist"}
                 </button>
               </div>
             ))}
@@ -540,35 +573,41 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-blue-600/5 to-transparent pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Ready to stop duct-taping
-            <br />
-            your business together?
+            {isAccepting
+              ? <>Ready to stop duct-taping<br />your business together?</>
+              : <>We&apos;re fully booked right now.<br />But you can skip the line.</>
+            }
           </h2>
           <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
-            Whether you need to automate the chaos or build something entirely
-            new — let&apos;s figure it out together. One call. No pressure. Just
-            clarity.
+            {isAccepting
+              ? "Whether you need to automate the chaos or build something entirely new — let's figure it out together. One call. No pressure. Just clarity."
+              : "Join the waitlist and you'll be the first to know when a spot opens up. We'll reach out personally to get your project started."}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
-            >
-              Book Your Free Discovery Call
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={() => setWaitlistOpen(true)}
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl font-medium text-lg transition-all"
-            >
-              Join the Waitlist
-            </button>
+            {isAccepting ? (
+              <button
+                onClick={() => setBookingOpen(true)}
+                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
+              >
+                Book Your Free Discovery Call
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            ) : (
+              <button
+                onClick={() => setWaitlistOpen(true)}
+                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl font-semibold text-lg transition-all pulse-cta flex items-center gap-2"
+              >
+                Join the Waitlist — Get Priority Access
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            )}
           </div>
 
           <p className="text-sm text-gray-500 mt-6">
-            Limited spots available each month. We keep our client list small so
-            every project gets our full attention.
+            {isAccepting
+              ? "Limited spots available each month. We keep our client list small so every project gets our full attention."
+              : "We take on a limited number of clients each month to ensure quality. Waitlist members get first priority."}
           </p>
         </div>
       </section>
