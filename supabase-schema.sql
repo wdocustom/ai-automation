@@ -55,3 +55,26 @@ CREATE POLICY "Allow anonymous availability reads" ON availability FOR SELECT US
 
 -- Allow service role full access (for admin API routes using service key)
 -- Note: Use SUPABASE_SERVICE_ROLE_KEY in admin API routes for full access
+
+-- Page view tracking (lightweight, privacy-friendly analytics)
+CREATE TABLE IF NOT EXISTS page_views (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  path TEXT NOT NULL,
+  referrer TEXT,
+  utm_source TEXT,
+  utm_medium TEXT,
+  utm_campaign TEXT,
+  device_type TEXT, -- 'desktop', 'mobile', 'tablet'
+  browser TEXT,
+  country TEXT,
+  screen_width INTEGER,
+  session_id TEXT, -- random per-session ID, not tied to identity
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_page_views_created_at ON page_views(created_at);
+CREATE INDEX IF NOT EXISTS idx_page_views_path ON page_views(path);
+CREATE INDEX IF NOT EXISTS idx_page_views_session ON page_views(session_id);
+
+ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow anonymous page view inserts" ON page_views FOR INSERT WITH CHECK (true);
